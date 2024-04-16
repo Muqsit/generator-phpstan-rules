@@ -11,5 +11,12 @@
         "psr-4": {
             "Muqsit\\": "src/"
         }
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
     }
 }

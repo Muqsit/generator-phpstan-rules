@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Muqsit\Rules;
+namespace Muqsit\GeneratorPHPStanRules;
 
 use Generator;
 use PhpParser\Node\Arg;
