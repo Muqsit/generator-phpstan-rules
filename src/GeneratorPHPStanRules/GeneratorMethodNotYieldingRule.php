@@ -83,10 +83,16 @@ final class GeneratorMethodNotYieldingRule implements Rule{
 		/** @var list<MethodReflection|FunctionReflection> $reflection */
 		$reflections = [];
 		if($node instanceof MethodCall){
-			$reflections[] = $scope->getMethodReflection($scope->getType($node->var), $node->name->toString());
+			$reflection = $scope->getMethodReflection($scope->getType($node->var), $node->name->toString());
+			if($reflection !== null){
+				$reflections[] = $reflection;
+			}
 		}elseif($node instanceof StaticCall){
 			if($node->class instanceof Name && $node->name instanceof Identifier){
-				$reflections[] = $scope->getMethodReflection($scope->resolveTypeByName($node->class), $node->name->toString());
+				$reflection = $scope->getMethodReflection($scope->resolveTypeByName($node->class), $node->name->toString());
+				if($reflection !== null){
+					$reflections[] = $reflection;
+				}
 			}
 		}elseif($node instanceof FuncCall){
 			if($node->name instanceof Name){
