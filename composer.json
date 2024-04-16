@@ -1,0 +1,15 @@
+{
+    "name": "muqsit/generator-phpstan-rules",
+    "type": "phpstan-extension",
+    "description": "PHPStan rules bringing added Generator inspections",
+    "license": ["MIT"],
+    "require": {
+        "php": "^8.2",
+        "phpstan/phpstan": "^1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Muqsit\\": "src/"
+        }
+    }
+}
