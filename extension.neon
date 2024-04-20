@@ -1,2 +1,7 @@
 rules:
     - Muqsit\GeneratorPHPStanRules\GeneratorMethodNotYieldingRule
+
+conditionalTags:
+    # set 'parent' attribute on nodes
+    PhpParser\NodeVisitor\NodeConnectingVisitor:
+        phpstan.parser.richParserNodeVisitor: true
