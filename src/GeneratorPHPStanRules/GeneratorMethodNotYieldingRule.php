@@ -185,7 +185,7 @@ final class GeneratorMethodNotYieldingRule implements Rule{
 		}
 		return [
 			RuleErrorBuilder::message(
-				"Generator method returned by " . (new Printer)->prettyPrint([$node]) . " is unused"
+				"Generator returned by " . (new Printer)->prettyPrint([$node]) . " is unused"
 			)->build()
 		];
 	}

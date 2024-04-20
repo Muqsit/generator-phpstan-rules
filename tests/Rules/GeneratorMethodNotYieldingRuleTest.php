@@ -21,11 +21,11 @@ final class GeneratorMethodNotYieldingRuleTest extends RuleTestCase{
 	public function testRule() : void{
 		$this->analyse([__DIR__ . "/data/generator-method-not-yielding.php"], [
 			[
-				'Generator method returned by \range_generator(0, 1) is unused',
+				'Generator returned by \range_generator(0, 1) is unused',
 				22
 			],
 			[
-				'Generator method returned by \range_generator(2, 3) is unused',
+				'Generator returned by \range_generator(2, 3) is unused',
 				26
 			],
 		]);
